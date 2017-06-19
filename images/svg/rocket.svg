@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="96px" viewBox="0 0 60 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rocket-Equities" transform="translate(-690.000000, -80.000000)">
+            <g id="Group-6" transform="translate(621.000000, 80.000000)">
+                <g id="Group" transform="translate(69.000000, 0.000000)">
+                    <polygon id="Rectangle" fill="#FFFFFF" points="9 41.2859216 14 39 14 81.7140784 9 84"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="0 66.3113208 5 64 5 88.1477987 0 92"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="45 39 50 41.2859216 50 84 45 81.7140784"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="55 64 60 66.3113208 60 92 55 88.1477987"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="18 14.6521739 23 12 23 73 18 73"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="36 12 41 14.6521739 41 73 36 73"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" points="27 2.62110068 29.5 0 32 2.62110068 32 65 27 65"></polygon>
+                    <polygon id="Rectangle" fill="#DA251F" points="19 93.2404092 19 83 24 83 24 96"></polygon>
+                    <polygon id="Rectangle" fill="#DA251F" points="36 96 41 93.2404092 41 83 36 83"></polygon>
+                    <polygon id="Rectangle" fill="#DA251F" points="28 91.1222153 30.5 94 33 91.1222153 33 79 28 79"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

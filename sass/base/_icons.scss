@@ -1,0 +1,25 @@
+.icon {
+  @include hideText();
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-agribusiness {
+  background-image: url($svg-dir + "/sprout.svg");
+}
+
+.icon-real-estate {
+  background-image: url($svg-dir + "/home.svg");
+}
+
+.icon-retail {
+  background-image: url($svg-dir + "/restaurant.svg");
+}
+
+.icon-money-markets {
+  background-image: url($svg-dir + "/money.svg");
+}

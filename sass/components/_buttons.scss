@@ -1,0 +1,37 @@
+$button-height: 52px;
+
+%button {
+  display: inline-block;
+  outline: 0;
+  text-decoration: none;
+  border: 0;
+  height: $button-height;
+  text-align: center;
+  @include transition(all 0.3s ease);
+  font-size: 13px;
+  line-height: $button-height - 4;
+  text-decoration: none;
+  cursor: pointer;
+  @include border-radius(4px);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.primary-button {
+  @extend %button;
+  color: $color-white;
+  background: $rocket-red;
+  font-weight: 700;
+
+  @include hoverStyles() {
+    background: darken($rocket-red, 5%);
+  }
+}
+
+@include breakpoint(tablet-and-up) {
+  .primary-button {
+    font-size: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

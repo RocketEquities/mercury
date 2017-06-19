@@ -1,0 +1,186 @@
+#grow-wealth {
+  background: url($img-dir + "/city.png") no-repeat center;
+
+  p {
+    line-height: px($base-padding*2);
+  }
+
+  .register .fieldset {
+    @include box-shadow(0 1px 6px rgba(0,0,0,0.5));  
+  }
+}
+
+.register {
+  max-width: 440px;
+  margin: auto;
+
+  .fieldset {
+    @include clearfix();
+    margin-bottom: px($base-padding*3);
+  }
+  
+  .email {
+    float: left;
+    width: 60%;
+    @include border-radius( 4px 0 0 4px);
+  }
+
+  .primary-button {
+    float: right;
+    width: 40%;
+    text-transform: uppercase;
+    min-width: 0;
+    @include border-radius(0 4px 4px 0); 
+  }
+
+  p {
+    margin-bottom: px($base-padding);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#handpicked-options {
+  .wrap > p {
+    color: $color-dark-gray-3;
+  }
+
+  ul {
+    padding: px($base-padding) 0; 
+    @include clearfix();
+
+    li {
+      float: left;
+      width: 50%;
+      padding: px($base-padding*2);
+    }
+
+    p {
+      color: $color-light-gray-3;
+      font-size: px(14);
+      line-height: 1.5;
+    }
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: px($base-padding) auto;
+    display: inline-block;
+  }
+
+  .option-title {
+    color: $color-blue-gray-3;
+    font-weight: 700; 
+    margin-bottom: px($base-padding);
+  }
+}
+
+#difference {
+  .sub-section-title {
+    margin-bottom: px($base-padding*2);
+  }
+
+  .wrap > p {
+    max-width: 940px;
+    margin: 0 auto px($base-padding*4);
+    line-height: 1.5;
+  }
+}
+
+#link {
+  .sub-section-title {
+    color: $color-dark-gray-3;
+    margin: 0 auto px($base-padding*3);
+    max-width: 600px;
+  }
+
+  .register .email {
+    border: 1px solid $color-light-gray-4;
+    border-right: 0;
+  }
+}
+
+@include breakpoint(small-portrait-only) {
+  #handpicked-options {
+    ul li {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@include breakpoint(tablet-and-up) {
+  #grow-wealth {
+    font-size: px($base-padding*2);
+    line-height: px(28);
+
+    .description {
+      line-height: 1.25;
+    }
+  }
+
+  .register {
+    .email {
+      width: 70%;
+    }
+
+    .primary-button {
+      width: 30%;
+    }
+  }
+
+  #handpicked-options {
+    .wrap > p {
+      font-size: px(22);
+      line-height: 2em;  
+    }
+
+    ul {
+      padding: px($base-padding*2) 0;
+
+      p {
+        font-size: px(16);
+        line-height: px(25);
+      }
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin: px($base-padding*4) auto;
+    }
+
+    .option-title {
+      font-size: px(18);
+      margin-bottom: px($base-padding*2);
+    }
+  }
+
+  #difference {
+    .wrap > p {
+      font-size: px(18);
+      line-height: px(28);
+    }
+  }
+
+  #link {
+    .sub-section-title {
+      margin-bottom: px($base-padding*6);
+    }
+  }
+}
+
+@include breakpoint(desktop-and-up) {
+  #handpicked-options {
+    ul li {
+      width: 25%;
+    }
+  }
+
+  #link {
+    max-width: none;
+  }
+}

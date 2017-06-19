@@ -1,0 +1,17 @@
+body.no-svg {
+  .icon-agribusiness {
+    background-image: url($img-dir + "/sprout.png");
+  }
+
+  .icon-real-estate {
+    background-image: url($img-dir + "/home.png");
+  }
+
+  .icon-retail {
+    background-image: url($img-dir + "/restaurant.png");
+  }
+
+  .icon-money-markets {
+    background-image: url($img-dir + "/money.png");
+  }
+}

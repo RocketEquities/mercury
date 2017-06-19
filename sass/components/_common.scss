@@ -1,0 +1,117 @@
+.logo {
+  background: url($svg-dir + "/rocket.svg") no-repeat center top;
+}
+
+.site-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+#site-logo {
+  background-size: auto 96px;
+  height: 130px;
+  width: 200px;
+  margin: 0 auto px($base-padding*5);
+  padding-top: 114px;
+}
+
+.wrap {
+  @include clearfix();
+  position: relative;
+  margin: auto;
+  max-width: 1130px;
+  width: 100%;
+  padding: 0 px($base-padding);
+}
+
+.info-section {
+  text-align: center;
+  padding: px($base-padding*5) px($base-padding);
+
+  &.dark-bg {
+    color: $color-white;
+    @include linearGradient($color-blue-gray, $color-blue-gray-4);
+  }
+}
+
+.section-title {
+  font-size: px($base-padding*3);
+  margin-bottom: px($base-padding);
+}
+
+.sub-section-title {
+  font-size: px($base-padding*2);
+  margin-bottom: px($base-padding);
+  line-height: 1.5;
+}
+
+.description {
+  font-weight: 300;
+  font-size: px($base-padding*1.5);
+  margin-bottom: px($base-padding*3);
+  line-height: 1.5;
+}
+
+@include breakpoint(tablet-and-up) {
+  .info-section {
+    padding: px($base-padding*8) px($base-padding);
+  }
+
+  .section-title {
+    font-size: px($base-padding*5);
+    margin-bottom: px($base-padding*2);
+  }
+
+  .sub-section-title {
+    font-size: px($base-padding*4);
+  }
+
+  .description {
+    font-size: px($base-padding*3);
+  }
+}
+
+#site-footer {
+  text-align: center;
+  color: $color-white;
+  padding: px($base-padding*2) 0 0;
+  background: $color-blue-gray-2;
+
+  .copyright {
+    background: $color-blue-gray;
+    font-size: px(12);
+    padding: px($base-padding*2);
+
+    p:first-child {
+      margin-bottom: px($base-padding*1);
+    }
+  }
+
+  .footer-logo {
+    margin: 0 auto px($base-padding*2);
+    text-align: center;   
+
+    .logo {
+      background-size: contain;
+      height: 40px;
+      width: 25px;
+      display: inline-block;
+      vertical-align: middle;  
+      margin-right: px($base-padding*2);
+    }
+
+    .site-title {
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 40px;
+      display: inline-block;
+      vertical-align: middle;  
+    }
+    
+    
+    
+    
+
+  }
+}
