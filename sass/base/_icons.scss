@@ -9,17 +9,25 @@
 }
 
 .icon-agribusiness {
-  background-image: url($svg-dir + "/sprout.svg");
+  background-image: url($svg-dir + "sprout.svg");
 }
 
 .icon-real-estate {
-  background-image: url($svg-dir + "/home.svg");
+  background-image: url($svg-dir + "home.svg");
 }
 
 .icon-retail {
-  background-image: url($svg-dir + "/restaurant.svg");
+  background-image: url($svg-dir + "restaurant.svg");
 }
 
 .icon-money-markets {
-  background-image: url($svg-dir + "/money.svg");
+  background-image: url($svg-dir + "money.svg");
+}
+
+.icon-fail {
+  background-image: url($svg-dir + "fail.svg");
+}
+
+.icon-success {
+  background-image: url($svg-dir + "success.svg");
 }

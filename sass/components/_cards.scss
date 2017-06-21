@@ -3,14 +3,17 @@
   @include clearfix();
   margin-bottom: px($base-padding*2);
   text-align: left;
+  position: relative;
 
   .image {
-    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 45%;
-    padding-bottom: 45%;
   }
 
   .text {
@@ -31,7 +34,13 @@
   }
 }
 
+.with-images {
+  @include clearfix();
+}
+
 .no-images {
+  @include clearfix();
+
   .card {
     @include border-radius(4px);
   }
@@ -41,9 +50,8 @@
   .card {
     .image {
       width: 100%;
+      position: static;
       height: 150px;
-      padding-bottom: 0;
-      float: none;
     }
   }
 }
@@ -58,7 +66,7 @@
         float: right;
       }
 
-      .image {
+      .image  {
         height: 200px;
       }
     }
@@ -109,7 +117,6 @@
   .with-images .card {
     .image {
       width: 40%;
-      padding-bottom: 50%;
     }
 
     .text {

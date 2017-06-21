@@ -34,19 +34,40 @@
   height: 32px; }
 
 .icon-agribusiness {
-  background-image: url("../images/svg//sprout.svg"); }
+  background-image: url("../images/svg/sprout.svg"); }
 
 .icon-real-estate {
-  background-image: url("../images/svg//home.svg"); }
+  background-image: url("../images/svg/home.svg"); }
 
 .icon-retail {
-  background-image: url("../images/svg//restaurant.svg"); }
+  background-image: url("../images/svg/restaurant.svg"); }
 
 .icon-money-markets {
-  background-image: url("../images/svg//money.svg"); }
+  background-image: url("../images/svg/money.svg"); }
+
+.icon-fail {
+  background-image: url("../images/svg/fail.svg"); }
+
+.icon-success {
+  background-image: url("../images/svg/success.svg"); }
 
 /** Fonts
  ---------------------------------------------------------*/
+@font-face {
+  font-family: "Lato";
+  src: url("lato-bold-webfont.woff2") format("woff2"), url("lato-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: url("lato-medium-webfont.woff2") format("woff2"), url("lato-medium-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: url("lato-regular-webfont.woff2") format("woff2"), url("lato-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
 /** Reset
  ---------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
@@ -87,7 +108,7 @@ html {
   position: relative;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #313131; }
 
@@ -152,7 +173,7 @@ input[type="search"],
 input[type="text"],
 input[type="date"] {
   outline: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .logo {
   background: url("../images/svg//rocket.svg") no-repeat center top; }
@@ -234,9 +255,12 @@ input[type="date"] {
     font-size: 30px; } }
 #site-footer {
   text-align: center;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
   padding: 20px 0 0;
   background: #363F4E; }
+  #site-footer a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none; }
   #site-footer .copyright {
     background: #2E3747;
     font-size: 12px;
@@ -291,9 +315,9 @@ input[type="date"] {
 
 @media only screen and (min-width: 768px) {
   .primary-button {
-    font-size: 20px;
     padding-left: 1em;
-    padding-right: 1em; } }
+    padding-right: 1em;
+    font-size: 14px; } }
 input:-webkit-autofill {
   background: rgba(0, 0, 0, 0.25) !important; }
 
@@ -317,19 +341,22 @@ input {
   background: #fff;
   *zoom: 1;
   margin-bottom: 20px;
-  text-align: left; }
+  text-align: left;
+  position: relative; }
   .card:after, .card:before {
     content: " ";
     display: table; }
   .card:after {
     clear: both; }
   .card .image {
-    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 45%;
-    padding-bottom: 45%; }
+    width: 45%; }
   .card .text {
     padding: 20px; }
   .card .card-title {
@@ -342,18 +369,32 @@ input {
     font-size: 14px;
     line-height: 23px; }
 
-.no-images .card {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px; }
+.with-images {
+  *zoom: 1; }
+  .with-images:after, .with-images:before {
+    content: " ";
+    display: table; }
+  .with-images:after {
+    clear: both; }
+
+.no-images {
+  *zoom: 1; }
+  .no-images:after, .no-images:before {
+    content: " ";
+    display: table; }
+  .no-images:after {
+    clear: both; }
+  .no-images .card {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
 
 @media only screen and (max-width: 1023px) {
   .card .image {
     width: 100%;
-    height: 150px;
-    padding-bottom: 0;
-    float: none; } }
+    position: static;
+    height: 150px; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .with-images .card {
     width: 48%;
@@ -384,8 +425,7 @@ input {
     margin-bottom: 10px; } }
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   .with-images .card .image {
-    width: 40%;
-    padding-bottom: 50%; }
+    width: 40%; }
   .with-images .card .text {
     width: 60%; } }
 @media only screen and (min-width: 1024px) {
@@ -405,11 +445,206 @@ input {
 @media only screen and (min-width: 1280px) {
   .with-images .card .text {
     width: 55%; } }
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*!
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=a611c6934f38232c70ec7faa93caa1a2)
+ * Config saved to config.json and https://gist.github.com/a611c6934f38232c70ec7faa93caa1a2
+ */
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; }
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000; }
+
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.modal-header .close {
+  margin-top: -2px; }
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143; }
+
+.modal-body {
+  position: relative;
+  padding: 30px 10px; }
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5; }
+
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0; }
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px; }
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 545px;
+    margin: 30px auto; }
+
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+
+  .modal-sm {
+    width: 300px; } }
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px; } }
+.clearfix:before,
+.clearfix:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after,
+.modal-header:after,
+.modal-footer:after {
+  clear: both; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.hidden {
+  display: none !important; }
+
+.modal {
+  text-align: center; }
+  .modal .primary-button {
+    min-width: 145px;
+    text-transform: uppercase; }
+  .modal .modal-title {
+    font-size: 20px; }
+  .modal .icon {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto; }
+  .modal p {
+    font-size: 14px;
+    line-height: 26px; }
+  .modal .text {
+    margin-bottom: 20px; }
+
+@media only screen and (min-width: 768px) {
+  .modal .modal-title {
+    font-size: 30px; }
+  .modal .icon-success {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto 10px; }
+  .modal .icon-fail {
+    width: 114px;
+    height: 114px;
+    margin: 60px auto; }
+  .modal p {
+    font-size: 16px; } }
 body {
   background: #FAFAFA; }
 
 #grow-wealth {
-  background: url("../images//city.png") no-repeat center; }
+  background: url("../images/city.png") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover; }
+  #grow-wealth .section-title,
+  #grow-wealth .description {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #grow-wealth p {
     line-height: 20px; }
   #grow-wealth .register .fieldset {
@@ -537,13 +772,20 @@ body {
 
   #link {
     max-width: none; } }
+@media only screen and (min-width: 1280px) {
+  #grow-wealth {
+    background-size: cover; } }
 body.no-svg .icon-agribusiness {
-  background-image: url("../images//sprout.png"); }
+  background-image: url("../images/sprout.png"); }
 body.no-svg .icon-real-estate {
-  background-image: url("../images//home.png"); }
+  background-image: url("../images/home.png"); }
 body.no-svg .icon-retail {
-  background-image: url("../images//restaurant.png"); }
+  background-image: url("../images/restaurant.png"); }
 body.no-svg .icon-money-markets {
-  background-image: url("../images//money.png"); }
+  background-image: url("../images/money.png"); }
+body.no-svg .icon-fail {
+  background-image: url("../images/fail.png"); }
+body.no-svg .icon-success {
+  background-image: url("../images/success.png"); }
 
 /*# sourceMappingURL=main.css.map */

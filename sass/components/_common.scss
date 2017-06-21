@@ -74,9 +74,14 @@
 
 #site-footer {
   text-align: center;
-  color: $color-white;
+  color: rgba($color-white, 0.6);
   padding: px($base-padding*2) 0 0;
   background: $color-blue-gray-2;
+
+  a {
+    color: rgba($color-white, 0.6);
+    text-decoration: none;
+  }
 
   .copyright {
     background: $color-blue-gray;
@@ -108,10 +113,5 @@
       display: inline-block;
       vertical-align: middle;  
     }
-    
-    
-    
-    
-
   }
 }

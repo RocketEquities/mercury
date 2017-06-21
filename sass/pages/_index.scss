@@ -1,5 +1,12 @@
 #grow-wealth {
-  background: url($img-dir + "/city.png") no-repeat center;
+  background: url($img-dir + "city.png") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  .section-title,
+  .description {
+    font-family: $secondary-font;
+  }
 
   p {
     line-height: px($base-padding*2);

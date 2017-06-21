@@ -18,6 +18,7 @@
 
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 </head>
 <body>
 
@@ -77,16 +78,16 @@
 
   <section id="difference" class="info-section dark-bg">
     <div class="wrap">
-      <h2 class="sub-section-title">What Makes Us Different?</h2>
-      <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula.</p>
+      <h2 class="sub-section-title">See, taste and feel where your investments will take you – Invest with us.</h2>
+      <p>At Rocket Equities, we break the barriers of purely digital and online investing schemes. We put you right in the center of your investments and let you experience where your money is growing.</p>
 
       <div class="with-images">
         <div class="card">
           <div class="image" style="background-image:url('/images/sample1.png');"></div>
           <div class="text">
-            <h3 class="card-title">Agribusiness lorem ipsum dolor sit amet</h3>
+            <h3 class="card-title">Agribusiness: Feeding Tomorrow's Generation</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+              Private investments become increasingly important as public funding for agriculture and food security decreases. Following the goals of the 2030 Agenda...
             </p>
           </div>
         </div>
@@ -94,9 +95,9 @@
         <div class="card">
           <div class="image" style="background-image:url('/images/sample2.png');"></div>
           <div class="text">
-            <h3 class="card-title">Money market lorem ipsum dolor sit amet</h3>
+            <h3 class="card-title">Blind Masseurs: Finding Opportunity in Giving Opportunity</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+              At the heart of investing is the creation of great impact— not only in terms of economic returns, but also in providing equitable opportunities...
             </p>
           </div>
         </div>
@@ -131,10 +132,11 @@
     <div class="wrap">
       <h2 class="sub-section-title">We link our clients to quality investments across the globe.</h2>
       <form class="register">
-      <div class="fieldset">
-        <input type="email" placeholder="Enter your email" class="email" />
-        <input type="submit" value="Sign up" class="primary-button" />
-      </div>
+        <div class="fieldset">
+          <input type="email" placeholder="Enter your email" class="email" />
+          <input type="submit" value="Sign up" class="primary-button" />
+        </div>
+      </form>
     </div>
   </section>  
 
@@ -144,9 +146,49 @@
     </div>
     <div class="copyright">
       <p>All rights reserved 2017 <br/></p>
-      <p>Email: teamrocket@rocketequities.com</p>
+      <p>Email: <a href="mailto:teamrocket@rocketequities.com">teamrocket@rocketequities.com</a></p>
     </div>
   </footer>
+
+  <div id="register-success-modal" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="register-success-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3 class="modal-title">We Have Lift Off!</h3>
+          <span class="icon icon-success"></span>
+          
+          <div class="text">
+            <p><strong>Thanks for signing up!</strong></p>
+            <p>Our team of investment experts will keep in touch with you.</p>
+          </div>
+          
+          <button class="primary-button" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="register-fail-modal" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="register-fail-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3 class="modal-title">Houston We Have A Problem!</h3>
+          <span class="icon icon-fail"></span>
+
+          <div class="text">
+            <p><strong>Sorry, something went wrong&hellip;</strong></p>
+            <p>Please enter your email address again.</p>
+          </div>
+
+          <button class="primary-button" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 </html>  
