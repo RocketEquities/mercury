@@ -176,7 +176,7 @@ input[type="date"] {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .logo {
-  background: url("../images/svg//rocket.svg") no-repeat center top; }
+  background: url("../images/svg/rocket.svg") no-repeat center top; }
 
 .site-title {
   text-transform: uppercase;
