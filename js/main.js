@@ -12,7 +12,7 @@ $( document ).ready(function() {
     }
 
     var register = $.ajax({
-      url: "http://ec2-54-255-250-104.ap-southeast-1.compute.amazonaws.com:8000/v1/signups",
+      url: "http://api.rocketequities.com/v1/signups",
       type: "POST",
       data: {
         email: email
