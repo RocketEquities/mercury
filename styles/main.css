@@ -707,7 +707,8 @@ body {
   width: 40px;
   height: 40px;
   margin: 10px auto;
-  display: inline-block; }
+  display: inline-block;
+  background-position: center bottom; }
 #handpicked-options .option-title {
   color: #324048;
   font-weight: 700;
@@ -772,9 +773,30 @@ body {
 
   #link {
     max-width: none; } }
-@media only screen and (min-width: 1280px) {
-  #grow-wealth {
-    background-size: cover; } }
+.error-page {
+  text-align: center;
+  padding: 40px 0 0; }
+  .error-page .title {
+    font-size: 20px; }
+  .error-page .icon {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto; }
+  .error-page p {
+    font-size: 14px;
+    line-height: 26px; }
+
+@media only screen and (min-width: 768px) {
+  .error-page {
+    padding: 80px 0 0; }
+    .error-page .title {
+      font-size: 30px; }
+    .error-page .icon-fail {
+      width: 114px;
+      height: 114px;
+      margin: 60px auto; }
+    .error-page p {
+      font-size: 16px; } }
 body.no-svg .icon-agribusiness {
   background-image: url("../images/sprout.png"); }
 body.no-svg .icon-real-estate {
