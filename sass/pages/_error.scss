@@ -1,0 +1,39 @@
+.error-page {
+  text-align: center;
+  padding: px($base-padding*4) 0 0;
+
+  .title {
+    font-size: px(20);
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    margin: px($base-padding*2) auto;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+@include breakpoint(tablet-and-up) {
+  .error-page {
+    padding: px($base-padding*8) 0 0;
+
+    .title {
+      font-size: px(30);
+    }
+
+    .icon-fail {
+      width: 114px;
+      height: 114px;
+      margin: px($base-padding*6) auto;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
