@@ -15,7 +15,7 @@ S3_ACCESS_KEY = ""
 S3_SECRET_KEY = ""
 
 DIST_DIR = $(TMP_DIR)
-DIST_OBJECTS = favicon.png fonts images index.html js styles
+DIST_OBJECTS = fonts images js styles favicon.png index.html 403.html 404.html 500.html
 
 all:
 	@echo 'make [build|clean|deploy]'
