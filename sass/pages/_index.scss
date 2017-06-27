@@ -1,7 +1,6 @@
 #grow-wealth {
-  background: url($img-dir + "city.png") no-repeat center;
+  background: $color-blue-gray url($img-dir + "city.jpg") no-repeat center top;
   background-attachment: fixed;
-  background-size: cover;
 
   .section-title,
   .description {
