@@ -10,7 +10,7 @@
 CWD = $(shell pwd)
 TMP_DIR = $(CWD)/tmp
 
-S3_BUCKET = s3://product-rocketequities
+S3_BUCKET = s3://www.rocketequities.com
 S3_ACCESS_KEY = ""
 S3_SECRET_KEY = ""
 
