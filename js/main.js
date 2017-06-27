@@ -22,6 +22,7 @@ $( document ).ready(function() {
     register.done(function(payload) {
       if (payload.data) {
         $successModal.modal("show");  
+        $(".email").val("");
         return;
       }
 
